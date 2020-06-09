@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{20}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Asplund} {et~al.}(2005){Asplund}, {Grevesse}, \&
@@ -75,6 +75,11 @@
   {Weber}}]{2019MNRAS.487..691P}
 {Picogna}, G., {Ercolano}, B., {Owen}, J.~E., \& {Weber}, M.~L. 2019, \mnras,
   487, 691
+
+\bibitem[{{Ribas} {et~al.}(2014){Ribas}, {Mer{\'\i}n}, {Bouy}, \&
+  {Maud}}]{2014A&A...561A..54R}
+{Ribas}, {\'A}., {Mer{\'\i}n}, B., {Bouy}, H., \& {Maud}, L.~T. 2014, \aap,
+  561, A54
 
 \bibitem[{{Sanz-Forcada} {et~al.}(2002){Sanz-Forcada}, {Brickhouse}, \&
   {Dupree}}]{2002ASPC..277..585S}

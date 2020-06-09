@@ -89,6 +89,8 @@
 \section{Introduction}
 %-------------------------------------------------------------------
 
+Planet-forming discs have a mean life-time of 4-6 Myr \citepads{2014A&A...561A..54R}.
+
 %-------------------------------------------------------------------
 \section{Methods}
 %-------------------------------------------------------------------
@@ -155,6 +157,31 @@ Then, we switch on the stellar heating (applied through a parameterisation from 
 %-------------------------------------------------------------------
 
 \subsection{Primordial discs}
+
+We integrated the gas flow along the streamlines during the last 200 orbits of our simulations and plotted the result in a sqaure-box plot in Fig.~\ref{fig:Mdot}. A fitting function has been overplotted in black, which shows the steep dependance of the mass-loss rate for the lower end of stellar mass studied, while it becomes much flatter around few times $10^{-8}$ for $M_\star > 0.3 M_\odot$. This behavior is in contrast with the much shallower function derived in \citep{Owen2012}. We show in the plot that the fitting function obtained in O12 is still able to reproduce the only two value modelled in their study (i.e. 0.1 and 0.7 Solar mass stars).
+The best fitting function obtained from the current study is
+\begin{equation}
+  \dot{M} = 2.56\times10^{-8} - 2.41\times10^{-9}\times\left(\frac{M_\star}{M_\odot}\right)^{-0.98},
+\end{equation}
+where one can see that the mass loss-rate is almost inversely proportional to the stellar mass.
+In this analysis the dependance on the stellar X-ray luminosity is not considered, but the value adopted for the simulation is mass-dependant following the relation
+\begin{equation}
+	\log_{10}{(L_X)} = 1.54\times \log_{10}{(M_\star)} + 30.31
+\end{equation}
+
+\subsubsection{Mass-loss rates}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\textwidth]{mdot}
+  \caption{Cumulative mass-loss rate as a function of stellar mass. \label{fig:Mdot}}
+\end{figure}
+
+\subsubsection{Wind profiles}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.45\textwidth]{Surfprofile}
+  \caption{Surface density mass-loss rate profile for the different simulations. \label{fig:Sigmadot}}
+\end{figure}
 
 \subsubsection{Sonic surface}
 

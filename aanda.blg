@@ -9,45 +9,45 @@ Warning--can't use both author and editor fields in 2005ASPC..336...25A
 Warning--empty publisher in 2005ASPC..336...25A
 Warning--can't use both author and editor fields in 2002ASPC..277..585S
 Warning--empty publisher in 2002ASPC..277..585S
-You've used 19 entries,
+You've used 20 entries,
             3039 wiz_defined-function locations,
-            828 strings with 9322 characters,
-and the built_in function-call counts, 10046 in all, are:
-= -- 810
-> -- 849
+            837 strings with 9549 characters,
+and the built_in function-call counts, 10538 in all, are:
+= -- 850
+> -- 889
 < -- 4
-+ -- 279
-- -- 259
-* -- 896
-:= -- 1843
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 161
-chr.to.int$ -- 18
-cite$ -- 23
-duplicate$ -- 370
-empty$ -- 520
-format.name$ -- 319
-if$ -- 1974
++ -- 292
+- -- 271
+* -- 940
+:= -- 1934
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 169
+chr.to.int$ -- 19
+cite$ -- 24
+duplicate$ -- 389
+empty$ -- 546
+format.name$ -- 334
+if$ -- 2070
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 19
-newline$ -- 61
-num.names$ -- 78
-pop$ -- 186
+missing$ -- 20
+newline$ -- 64
+num.names$ -- 82
+pop$ -- 194
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 169
 quote$ -- 0
-skip$ -- 307
+skip$ -- 323
 stack$ -- 0
-substring$ -- 407
+substring$ -- 428
 swap$ -- 18
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 165
+type$ -- 174
 warning$ -- 4
-while$ -- 78
+while$ -- 82
 width$ -- 0
-write$ -- 193
+write$ -- 203
 (There were 5 warnings)
