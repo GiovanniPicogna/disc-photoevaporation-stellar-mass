@@ -1,4 +1,4 @@
-\begin{thebibliography}{20}
+\begin{thebibliography}{25}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Asplund} {et~al.}(2005){Asplund}, {Grevesse}, \&
@@ -54,9 +54,23 @@
 {Ercolano}, B., {Young}, P.~R., {Drake}, J.~J., \& {Raymond}, J.~C.
   2008{\natexlab{b}}, \apjs, 175, 534
 
+\bibitem[{{G{\"u}del} {et~al.}(2007){G{\"u}del}, {Briggs}, {Arzner}, {Audard},
+  {Bouvier}, {Feigelson}, {Franciosini}, {Glauser}, {Grosso}, {Micela},
+  {Monin}, {Montmerle}, {Padgett}, {Palla}, {Pillitteri}, {Rebull}, {Scelsi},
+  {Silva}, {Skinner}, {Stelzer}, \& {Telleschi}}]{2007A&A...468..353G}
+{G{\"u}del}, M., {Briggs}, K.~R., {Arzner}, K., {et~al.} 2007, \aap, 468, 353
+
+\bibitem[{{Hollenbach} {et~al.}(1994){Hollenbach}, {Johnstone}, {Lizano}, \&
+  {Shu}}]{1994ApJ...428..654H}
+{Hollenbach}, D., {Johnstone}, D., {Lizano}, S., \& {Shu}, F. 1994, \apj, 428,
+  654
+
 \bibitem[{{Kashyap} \& {Drake}(2000)}]{2000BASI...28..475K}
 {Kashyap}, V. \& {Drake}, J.~J. 2000, Bulletin of the Astronomical Society of
   India, 28, 475
+
+\bibitem[{{Liffman}(2003)}]{2003PASA...20..337L}
+{Liffman}, K. 2003, \pasa, 20, 337
 
 \bibitem[{{Maggio} {et~al.}(2007){Maggio}, {Flaccomio}, {Favata}, {Micela},
   {Sciortino}, {Feigelson}, \& {Getman}}]{2007ApJ...660.1462M}
@@ -65,6 +79,10 @@
 \bibitem[{{Mignone} {et~al.}(2007){Mignone}, {Bodo}, {Massaglia}, {Matsakos},
   {Tesileanu}, {Zanni}, \& {Ferrari}}]{2007ApJS..170..228M}
 {Mignone}, A., {Bodo}, G., {Massaglia}, S., {et~al.} 2007, \apjs, 170, 228
+
+\bibitem[{{Owen} {et~al.}(2012){Owen}, {Clarke}, \&
+  {Ercolano}}]{2012MNRAS.422.1880O}
+{Owen}, J.~E., {Clarke}, C.~J., \& {Ercolano}, B. 2012, \mnras, 422, 1880
 
 \bibitem[{{Owen} {et~al.}(2010){Owen}, {Ercolano}, {Clarke}, \& {Alexand
   er}}]{2010MNRAS.401.1415O}
@@ -89,6 +107,10 @@
 
 \bibitem[{{Savage} \& {Sembach}(1996)}]{1996ApJ...470..893S}
 {Savage}, B.~D. \& {Sembach}, K.~R. 1996, \apj, 470, 893
+
+\bibitem[{{Siess} {et~al.}(2000){Siess}, {Dufour}, \&
+  {Forestini}}]{2000A&A...358..593S}
+{Siess}, L., {Dufour}, E., \& {Forestini}, M. 2000, \aap, 358, 593
 
 \bibitem[{{W{\"o}lfer} {et~al.}(2019){W{\"o}lfer}, {Picogna}, {Ercolano}, \&
   {van Dishoeck}}]{2019MNRAS.490.5596W}
