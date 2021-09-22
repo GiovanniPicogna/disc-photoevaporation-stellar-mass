@@ -6,6 +6,18 @@ import matplotlib.pyplot as plt
 import os
 
 from lmfit import Model, Parameters
+
+import matplotlib.pylab as pylab
+
+params = {
+    "legend.fontsize": "x-large",
+    "figure.figsize": (7, 4.5),
+    "axes.labelsize": "x-large",
+    "axes.titlesize": "x-large",
+    "xtick.labelsize": "x-large",
+    "ytick.labelsize": "x-large",
+}
+pylab.rcParams.update(params)
 from matplotlib import rc
 
 rc("font", **{"family": "sans-serif"})

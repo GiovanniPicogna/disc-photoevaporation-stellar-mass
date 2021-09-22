@@ -9,9 +9,20 @@ import matplotlib as mpl
 
 mpl.use("pdf")
 
+import matplotlib.pylab as pylab
+
+params = {
+    "legend.fontsize": "x-large",
+    "figure.figsize": (12, 6),
+    "axes.labelsize": "x-large",
+    "axes.titlesize": "x-large",
+    "xtick.labelsize": "x-large",
+    "ytick.labelsize": "x-large",
+}
+pylab.rcParams.update(params)
 from matplotlib import rc
 
-rc("font", **{"family": "serif"})
+rc("font", **{"family": "sans-serif"})
 rc("text", usetex=True)
 rc("xtick", labelsize=14.0)
 rc("ytick", labelsize=14.0)
@@ -27,7 +38,7 @@ files = [
 Rstars = [1.055, 2.31, 2.125, 2.615]
 Mstars = [0.1, 0.3, 0.5, 1.0]
 
-width = 14
+width = 12
 height = 6
 fig = plt.figure()
 gs = fig.add_gridspec(nrows=2, ncols=4, hspace=0, wspace=0)
@@ -39,13 +50,14 @@ labels = ["\\texttt{01Msun}", "\\texttt{03Msun}", "\\texttt{05Msun}", "\\texttt{
 Mstar = [0.1, 0.3, 0.5, 1.0]
 index_max = [415, 470, 452, 553]
 
-xticks1 = np.arange(0, 26, 5)
-xticks = np.arange(0, 26, 5)
+xticks1 = np.arange(0, 21, 5)
+xticks = np.arange(0, 21, 5)
+print(xticks)
 
 for i in range(2):
     for j in range(4):
-        ax[i, j].set_xlim(0, 24.99)
-        ax[i, j].set_ylim(0, 24.99)
+        ax[i, j].set_xlim(0, 24)
+        ax[i, j].set_ylim(0, 24)
         ax[i, j].set_aspect("equal")
         if i == 1:
             ax[i, j].set_xlabel(r"R [R$_g$]", size=14, color="black")
@@ -158,5 +170,5 @@ for i in range(2):
 
 plt.tight_layout(pad=0.0)
 fig.set_size_inches(width, height)
-fig.savefig("Fig1.png", bbox_inches="tight", dpi=400)
+fig.savefig("Figure1.png", bbox_inches="tight", dpi=400)
 plt.close(fig)
