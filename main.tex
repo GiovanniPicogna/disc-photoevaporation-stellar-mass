@@ -185,7 +185,7 @@ The initial set-up is based on the gas densities and dust temperatures from the 
 For this particular study a different set-up is adopted for each individual stellar mass, based on its mass and bolometric luminosity (see Fig.~\ref{fig:initdiscs}).
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{stream_init}
+    \includegraphics[width=\textwidth]{Figure1}
     \caption{Initial dust temperature (upper panel) and density (lower panel) distribution in the inner 20 gravitational radii for the the different runs from the \textsc{diad} models. \label{fig:initdiscs}}
 \end{figure*}
 The stellar parameters were obtained from \citetads{2000A&A...358..593S} for an age of \SI{1}{Myr}, and a metallicity $Z=0.02$ without overshooting.
@@ -225,7 +225,7 @@ We modelled $4$ different stellar masses, ranging from \SI{0.1}{\solarmass} to \
 %We divide the parameterisation in $40$ slabs equally spaced between $N=5\cdot 10^{20}$ pp cm$^{-2}$ and $N_X$. In Figure~\ref{fig:tempxi}, taken from \citetalias{Ercolano2021}, we illustrate the behaviour of the temperature dependence on the ionization parameter for the different spectra, compared with the previous model by \citetads{2010MNRAS.401.1415O}
 
 \begin{figure}
-    \includegraphics[width=\columnwidth]{xiTe1}
+    \includegraphics[width=\columnwidth]{Figure2}
     \caption{Temperature as a function of the ionization parameter, where $3$ selected column densities are highlighted.} \label{fig:tempxi}
 \end{figure}
 
@@ -276,7 +276,7 @@ The grid is spaced linearly in the polar direction, with a refinement at the win
 We initially evolve the system for few orbits at \SI{10}{au} without stellar irradiation in order for it to readjust to the hydrostatic equilibrium. Then, we switch on the stellar heating (applied through a parameterisation as explained above and in \citetalias{2019MNRAS.487..691P}) and continue to evolve the system for a few hundred orbits until the cumulative mass-loss rate and gas streamline in the wind have reached a steady-state after few hundred orbital periods (at \SI{10}{au}), as shown in Figure~\ref{fig:mdotevol}.
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{mdotevol}
+    \includegraphics[width=\columnwidth]{Figure3}
     \caption{Cumulative mass-loss rate evolution as a function of time for the different stellar mass models. \label{fig:mdotevol}}
 \end{figure}
 
@@ -305,12 +305,12 @@ In this section we discuss in the first part the effects of the irradiation from
 We show in Fig.~\ref{fig:discs} the gas temperature (top panel) and density (bottom panel) distribution for the different stellar masses at the equilibrium.
 \begin{figure*}
     \centering
-    \includegraphics[width=\textwidth]{stream}
+    \includegraphics[width=\textwidth]{Figure4}
     \caption{Temperature (upper panel) and density (lower panel) distribution in the inner $25$ gravitational radii for the the different runs. The sonic surface is overlayed with a solid red line and the gas streamlines every $5\%$ of the cumulative mass-loss rate with orange dashed lines. The maximum penetration depth of the X-rays is shown as well with a dashed red line. \label{fig:discs}}
 \end{figure*}
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{HR_comp}
+    \includegraphics[width=\columnwidth]{Figure5}
     \caption{Initial disc aspect ratio for the runs reported in Tab.~\ref{tab:stars}. \label{fig:aspectratio}}
 \end{figure}
 Two main aspects can be seen in the observed profiles. 
@@ -320,7 +320,7 @@ Two main aspects can be seen in the observed profiles.
 \subsection{Mass-loss rates}\label{sec:mdot}
 We integrated the gas flow along the streamlines in the wind during the last \SI{50}{orbits} of each simulation and plotted the resulting cumulative mass-loss rates as a function of stellar masses in a square-box plot in Figure~\ref{fig:Mdot}, where we included also the run with a \SI{0.7}{\solarmass} star from \citetalias{2019MNRAS.487..691P}, which has been rescaled in order to have the same stellar mass--X-ray luminosity adopted in these runs following eq.~\ref{eq:Lx}.
 \begin{figure}
-  \includegraphics[width=\columnwidth]{mdot}
+  \includegraphics[width=\columnwidth]{Figure6}
   \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last $50$ orbital timescales at \SI{10}{\astronomicalunit}. The derived linear fit is overplotted with a black dashed line, and a blue shaded region shows the variation in the mass-loss rate due to the uncertainty in the X-ray luminosity as a function of stellar mass in equation~\ref{eq:Lx}. \label{fig:Mdot}}
 \end{figure}
 A fitting function has been overplotted with a dashed line, which shows the linear dependence of the mass-loss rate as a function of stellar mass. This linear trend is in contrast with the flat distribution as a function of stellar mass ($\propto \mathrm{M}_\star^{-0.068}$) obtained by \citetads{2012MNRAS.422.1880O}, but there the X-ray luminosity was kept constant while changing the stellar mass (see Section~\ref{sec:mass-dependance} for a proper comparison). Furthermore, the linear trend doesn't show the flattening of the mass-loss rates observed for large X-ray luminosity in \citetalias{2019MNRAS.487..691P} because even the \SI{1}{\solarmass} star has an X-ray luminosity of $\log(L_X) = 30.3$, which is smaller than the saturation value observed in the previous study.
@@ -341,8 +341,8 @@ To understand the anomaly observed for the \SI{0.3}{\solarmass} star we rescaled
 We can see that, when rescaled, we obtain 2 similar profiles for the low X-ray luminosities (and spectra hardness) and two for the high luminosities. This can be explained with the harder spectra in the 'soft' X-ray band (0.1–1 keV) for lower X-ray luminosities which drives the peak at larger radii, as studied in \citetalias{Ercolano2021}. The relative difference amongst the profiles, once rescaled, is given by a combined effect of the change in the stellar mass and absolute value of the X-ray luminosity.
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{Sigmadot}
-  \includegraphics[width=\columnwidth]{Sigmadot_Rg}
+  \includegraphics[width=\columnwidth]{Figure7a}
+  \includegraphics[width=\columnwidth]{Figure7b}
   \caption{Surface density mass-loss rate profile for the different simulations. In the top panel the mass-loss rate is plotted as a function of the cylindrical radius in au, while in the bottom panel the dependence is a function of the gravitational radius (see section~\ref{sec:wind-prof}). \label{fig:Sigmadot}}
 \end{figure}
 
@@ -389,7 +389,7 @@ In order to isolate the effect of stellar mass on the photoevaporative mass-loss
 We show in Figure~\ref{fig:cumdotMtest} the cumulative mass-loss rate for the different stellar masses and we compare it with the prescription from \citetads{2012MNRAS.422.1880O}.
 \begin{figure}
   \centering
-  \includegraphics[width=\columnwidth]{mdot_Mtest}
+  \includegraphics[width=\columnwidth]{Figure8}
   \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last 50 orbital timescales at \SI{10}{\astronomicalunit}, keeping the X-ray luminosity fixed. A linear fit has been overplotted with a dot-dashed line, as well as the prediction from \citepads{2012MNRAS.422.1880O} in a dotted line. \label{fig:cumdotMtest}}
 \end{figure}
 We see that also in this case the mass-loss rate is not flat, in contrast to what was observed in \citetads{2012MNRAS.422.1880O}. The reason is again the difference in the disc flaring which allows larger mass stars to reach further region in the disc, generating a large mass flux. However, the dependence of the mass-loss rate as a function of the pure stellar mass becomes much more shallower, increasing only by a factor $3$ from \SI{0.1}{\solarmass} to \SI{1}{\solarmass} instead of an order of magnitude as shown in Figure~\ref{fig:Mdot}.
@@ -446,7 +446,7 @@ In Figure~\ref{fig:sonicsurf} we plot the density (upper plot) and temperature (
 We see that in our case the steepness of the temperature profile is much shallower, and only the \SI{1}{\solarmass} star (green line) matches the expected profile between $3$ and $6$ gravitational radii before flattening again.
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{sonicsurf}
+    \includegraphics[width=\columnwidth]{Figure9}
     \caption{Temperature at sonic surface as a function of the gravitational radius for the different stellar masses modelled. \label{fig:sonicsurf}}
 \end{figure}
 This behaviour has been observed also by \citeads{2012MNRAS.422.1880O} (see his Figure 6), where the Parker wind value was recovered only around the gravitational radius, flattening close to the star and far away from it, following the sigmoidal temperature prescription coming from Figure~\ref{fig:tempxi}.
@@ -455,7 +455,7 @@ Two trends can be identify in Figure~\ref{fig:sonicsurf}.
 (ii) The temperature pass through a transition regime with a similar slope which is shifted towards the central star going from the higher to the lower mass star. This shift is also linearly increasing with the stellar mass, and to show it, we replot the bottom panel of Figure~\ref{fig:sonicsurf} dividing the gravitational radius again by the stellar mass in Figure~\ref{fig:sonicsurfrescaled}, where the theoretical temperature for the \SI{1}{\solarmass} star is reported to guide the eye.
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{Tss}
+    \includegraphics[width=\columnwidth]{Figure10}
     \caption{Temperature at sonic surface as a function of the gravitational radius divided by the stellar mass for the different models. \label{fig:sonicsurfrescaled}}
 \end{figure}
 The linear radial shift in the temperature at the sonic surface may be due to the difference in the disc scale height, which affect the density at the sonic surface, and thus the ionization parameter which is responsible of the change in the temperature. 
@@ -512,7 +512,7 @@ In order to get the best fit to the observation we used a linear relation betwee
 \citetads{2013ApJ...771..129A} found a roughly linear relationship between the disc mass and stellar mass, studying a large sample of Class~II discs. More recently \citetads{2016ApJ...831..125P}, studying few young star forming regions, found a slightly steeper than linear dust disc mass - stellar mass relationship, though including in the sample also the brown dwarfs linearize it again \citepads{2021arXiv210605247R}.
 \begin{figure}
     \centering
-    \includegraphics[width=\columnwidth]{obs}
+    \includegraphics[width=\columnwidth]{Figure11}
     \caption{Inner disc lifetime calculated from our models using eq.~\ref{eq:tlife} compared with the disc fraction as a function of the mass for the members of $\lambda$-Ori. The shaded regions show the uncertainty in equations~\ref{eq:mdotAlcala},\ref{eq:Lx}. \label{fig:obs}}
 \end{figure}
 The results are matching very well the observations for the whole range of explored masses, and in particular the change in the slope for masses below \SI{0.3}{\solarmass}, which gives us confidence on the ability of the photoevaporative models to predict the observed disc lifetimes. Furthermore, our new prescription, with a linear scaling of disc masses as a function of stellar mass, captures better the disc lifetime distribution with respect to the previous state of the art model.
