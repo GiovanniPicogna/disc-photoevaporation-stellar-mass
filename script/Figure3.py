@@ -44,10 +44,10 @@ width = 7
 height = 4.5
 fig = plt.figure(figsize=((width, height)))
 labels = [
-    r"\texttt{01Msun}",
-    r"\texttt{03Msun}",
-    r"\texttt{05Msun}",
-    r"\texttt{07Msun}",
+    r"\texttt{0.1Msun}",
+    r"\texttt{0.3Msun}",
+    r"\texttt{0.5Msun}",
+    r"\texttt{0.7Msun}",
     r"\texttt{1Msun}",
 ]
 colors = ["black", "dimgrey", "grey", "darkgrey", "lightgrey"]

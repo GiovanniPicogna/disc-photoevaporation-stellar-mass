@@ -106,7 +106,7 @@ ax1.fill_between(
     color="lightblue",
     alpha=0.6,
 )
-ax1.set_ylabel("$\log_{10}(\dot{M}$ [$M_\odot$/yr])", size=14)
+ax1.set_ylabel("$\log_{10}(\dot{\mathrm{M}}_w$ [$M_\odot$/yr])", size=14)
 ax1.set_xlabel("$M_\star$ [$M_\odot$]", size=14)
 ax1.set_xticks([0.1, 0.3, 0.5, 1.0])
 ax1.set_xticklabels([0.1, 0.3, 0.5, 1.0])

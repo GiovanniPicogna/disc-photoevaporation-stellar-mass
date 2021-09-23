@@ -59,7 +59,7 @@ Mstar = [0.1, 0.3, 0.5, 1.0]
 width = 7
 height = 4.5
 fig, ax = plt.subplots(ncols=1, nrows=1)
-labels = [r"\texttt{01Msun}", r"\texttt{03Msun}", r"\texttt{05Msun}", r"\texttt{1Msun}"]
+labels = [r"\texttt{0.1Msun}", r"\texttt{0.3Msun}", r"\texttt{0.5Msun}", r"\texttt{1Msun}"]
 Mdot = [
     pow(10, -8.448195192063903),
     pow(10, -7.918753594822812),

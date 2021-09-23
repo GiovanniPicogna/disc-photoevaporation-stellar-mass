@@ -46,7 +46,7 @@ ax = gs.subplots(sharex=True, sharey=True)
 
 base_path = "/e/arch/users/picogna/Photoevaporation/Mass/"
 dirs = ["Final/01Msun", "Final/03Msun", "Final/05Msun", "Final/1Msun"]
-labels = ["\\texttt{01Msun}", "\\texttt{03Msun}", "\\texttt{05Msun}", "\\texttt{1Msun}"]
+labels = ["\\texttt{0.1Msun}", "\\texttt{0.3Msun}", "\\texttt{0.5Msun}", "\\texttt{1Msun}"]
 Mstar = [0.1, 0.3, 0.5, 1.0]
 index_max = [415, 470, 452, 553]
 

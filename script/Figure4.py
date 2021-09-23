@@ -79,7 +79,7 @@ dirs = [
     "05Msun",
     "1Msun",
 ]
-labels = ["\\texttt{01Msun}", "\\texttt{03Msun}", "\\texttt{05Msun}", "\\texttt{1Msun}"]
+labels = ["\\texttt{0.1Msun}", "\\texttt{0.3Msun}", "\\texttt{0.5Msun}", "\\texttt{1Msun}"]
 Mstar = [0.1, 0.3, 0.5, 1.0]
 index_max = [415, 470, 452, 553]
 
@@ -150,7 +150,7 @@ for i in range(2):
             Z.to(u.AU).value / Rg,
             Cd,
             vals,
-            linestyles="dashed",
+            linestyles="dotted",
             colors="red",
         )
         ax[i, j].set_xticks(xticks)

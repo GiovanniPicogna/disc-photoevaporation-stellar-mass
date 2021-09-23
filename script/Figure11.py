@@ -174,7 +174,7 @@ plt.plot(
     ".",
     ms=20,
     color="grey",
-    label="C69 [5 Myr, Bayo+ 2012]",
+    label="$\lambda$-Ori [5 Myr, Bayo+ 2012]",
 )
 
 labels = [r"$\alpha = 0.99$", r"$\alpha = 1.13$", r"$\alpha = 1.10$"]

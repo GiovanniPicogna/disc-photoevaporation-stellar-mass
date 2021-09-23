@@ -152,7 +152,7 @@ def radius1d10(tvalue, rmin, rmax):
     return rad
 
 
-labels = [r"\texttt{01Msun}", r"\texttt{03Msun}", r"\texttt{05Msun}", r"\texttt{1Msun}"]
+labels = [r"\texttt{0.1Msun}", r"\texttt{0.3Msun}", r"\texttt{0.5Msun}", r"\texttt{1Msun}"]
 width = 7
 height = 4.5
 
