@@ -1,11 +1,9 @@
-title: Your awesome title
-author:
-  name: GitHub User
-  email: your-email@domain.com
+title: The dispersal of protoplanetary discs. – III: Influence of stellar mass ondisc photoevaporation
+author: Giovanni Picogna, Barbara Ercolano, and Catherine Espaillat
+  name: GiovanniPicogna
+  email: giovanni.picogna@pm.me
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Influence of stellar mass on disc photoevaporation
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -16,8 +14,8 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    twitter: giovannipicogna
+    github:  GiovanniPicogna
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
