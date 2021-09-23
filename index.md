@@ -6,7 +6,7 @@ In this paper we study the influence of stellar mass on mass-loss rates due to X
 We found a linear relationship between the mass-loss rates and the stellar masses when changing the X-ray luminosity accordingly with the stellar mass.
 This linear increase is observed also when the X-ray luminosity is kept fixed because of the lower disc aspect ratio which allows the X-ray irradiation to reach larger radii.
 We provide new analytical relations for the mass-loss rates and profiles of photoevaporative winds as a function of the stellar mass that can be used in disc and planet population synthesis models.
-Our photoevaporative models correctly predict the observed trend of disc life-time as a function of stellar mass with an increased steepness for stars smaller than \SI{0.3}{\solarmass}, indicating that X-ray photoevaporation is a good candidate to explain the observed disc lifetimes.
+Our photoevaporative models correctly predict the observed trend of disc life-time as a function of stellar mass with an increased steepness for stars smaller than 0.3 \\[ M_\odot \\], indicating that X-ray photoevaporation is a good candidate to explain the observed disc lifetimes.
 
 ### Markdown
 
