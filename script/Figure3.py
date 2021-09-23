@@ -55,7 +55,7 @@ linestyles = ["-", "-.", ":", "--", "--"]
 fig = plt.figure()
 for i in range(5):
     plt.plot(data[i], color=colors[i], label=labels[i])
-plt.ylabel(r"$\log_{10}(\dot{M}\,\, [M_\odot\, \textrm{yr}^{-1}])$")
+plt.ylabel(r"$\log_{10}(\mathrm{\dot{M}}_w\,\, [M_\odot\, \textrm{yr}^{-1}])$")
 plt.xlabel(r"t [orbits @ 10 au]")
 plt.yscale("log")
 plt.legend(ncol=2, loc="lower right")

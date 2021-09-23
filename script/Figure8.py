@@ -9,9 +9,12 @@ mpl.use("pdf")
 import matplotlib.pyplot as plt
 import matplotlib.pylab as pylab
 
+width = 7
+height = 4.5
+
 params = {
     "legend.fontsize": "x-large",
-    "figure.figsize": (7, 4.5),
+    "figure.figsize": (width, height),
     "axes.labelsize": "x-large",
     "axes.titlesize": "x-large",
     "xtick.labelsize": "x-large",
@@ -25,25 +28,6 @@ rc("text", usetex=True)
 rc("xtick", labelsize=14.0)
 rc("ytick", labelsize=14.0)
 rc("axes", labelsize=14.0)
-
-
-def MdotLxPicogna(Lx1, Lx2):
-    AL = -2.7326
-    BL = 3.3307
-    CL = -2.9868e-3
-    DL = -7.2580
-    mdot1 = 10 ** (AL * np.exp(((np.log(np.log10(Lx1)) - BL) ** 2) / CL) + DL)
-    mdot2 = 10 ** (AL * np.exp(((np.log(np.log10(Lx2)) - BL) ** 2) / CL) + DL)
-    return mdot1 / mdot2
-
-
-def Lx(*Mstar):
-    for x in Mstar:
-        maxLx = 10 ** (1.42 * np.log10(x) + 30.37)
-        minLx = 10 ** (1.66 * np.log10(x) + 30.25)
-        aveLx = 10 ** (1.54 * np.log10(x) + 30.31)
-        return minLx, aveLx, maxLx
-
 
 def sci_notation(num, decimal_digits=1, precision=None, exponent=None):
     """
@@ -62,12 +46,6 @@ def sci_notation(num, decimal_digits=1, precision=None, exponent=None):
 
     return r"${0:.{2}f}\cdot10^{{{1:d}}}$".format(coeff, exponent, precision)
 
-
-def MdotOwen12(Mstar):
-    Lx = 10 ** (1.54 * np.log10(Mstar) + 30.31)
-    return 6.25e-9 * (Mstar ** (-0.068)) * ((Lx / 1.0e30) ** 1.14)
-
-
 mdot01 = np.loadtxt("../data/PLUTO/test_mass/01Msun/mdot_ave.dat")
 mdot03 = np.loadtxt("../data/PLUTO/test_mass/03Msun/mdot_ave.dat")
 mdot05 = np.loadtxt("../data/PLUTO/test_mass/05Msun/mdot_ave.dat")
@@ -81,8 +59,6 @@ data = [
     (mdot10[fin_idx:]),
 ]
 
-width = 7
-height = 4.5
 fig1, ax1 = plt.subplots()
 ax1.boxplot(data, positions=[0.1, 0.3, 0.5, 1.0])
 x = np.linspace(0.1, 1.0, 1000)
@@ -98,13 +74,6 @@ ax1.plot(
     6.25e-9 * x ** (-0.068) * (7.02e29 / 1.0e30) ** (1.14),
     "k:",
     label="Owen et al., 2012",
-)
-ax1.fill_between(
-    x,
-    (2.285e-8 * x + 6.825e-9) * MdotLxPicogna(Lx(x)[0], Lx(x)[1]),
-    (2.285e-8 * x + 6.825e-9) * MdotLxPicogna(Lx(x)[2], Lx(x)[1]),
-    color="lightblue",
-    alpha=0.6,
 )
 ax1.set_ylabel("$\log_{10}(\dot{\mathrm{M}}_w$ [$M_\odot$/yr])", size=14)
 ax1.set_xlabel("$M_\star$ [$M_\odot$]", size=14)
