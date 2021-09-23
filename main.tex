@@ -137,7 +137,7 @@ $^{3}$Department of Astronomy \& Institute for Astrophysical Research, Boston Un
 % Abstract of the paper
 \begin{abstract}
 The strong X-ray irradiation from young solar-type stars may play a crucial role in the thermodynamics and chemistry of circumstellar discs, driving their evolution in the last stages of disc dispersal as well as shaping the atmospheres of newborn planets.
-In this paper we study the influence of stellar mass on mass-loss rates due to X-ray irradiation, extending our previous study of the mass-loss rate's dependence on the X-ray luminosity and spectrum. We focus on stars with masses between $0.1$ and \SI{1}{\solarmass}, which are the main target of current and future missions to find potentially habitable planets.
+In this paper we study the influence of stellar mass on mass-loss rates due to X-ray irradiation, extending our previous study of the mass-loss rate's dependence on the X-ray luminosity and spectrum hardness. We focus on stars with masses between $0.1$ and \SI{1}{\solarmass}, which are the main target of current and future missions to find potentially habitable planets.
 We found a linear relationship between the mass-loss rates and the stellar masses when changing the X-ray luminosity accordingly with the stellar mass.
 This linear increase is observed also when the X-ray luminosity is kept fixed because of the lower disc aspect ratio which allows the X-ray irradiation to reach larger radii.
 We provide new analytical relations for the mass-loss rates and profiles of photoevaporative winds as a function of the stellar mass that can be used in disc and planet population synthesis models.
@@ -322,7 +322,7 @@ Two main aspects can be seen in the observed profiles.
 We integrated the gas flow along the streamlines in the wind during the last \SI{50}{orbits} of each simulation and plotted the resulting cumulative mass-loss rates as a function of stellar masses in a square-box plot in Figure~\ref{fig:Mdot}, where we included also the run with a \SI{0.7}{\solarmass} star from \citetalias{2019MNRAS.487..691P}, which has been rescaled in order to have the same stellar mass--X-ray luminosity adopted in these runs following eq.~\ref{eq:Lx}.
 \begin{figure}
   \includegraphics[width=\columnwidth]{Figure6}
-  \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last $50$ orbital timescales at \SI{10}{\astronomicalunit}. The derived linear fit is overplotted with a black dashed line, and a blue shaded region shows the variation in the mass-loss rate due to the uncertainty in the X-ray luminosity as a function of stellar mass in equation~\ref{eq:Lx}. \label{fig:Mdot}}
+  \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last $50$ orbital timescales at \SI{10}{\astronomicalunit}. The derived linear fit is overplotted with a black dashed line, \textbf{and a blue shaded region shows the variation in the mass-loss rate due to the uncertainty in the X-ray luminosity as a function of stellar mass in equation~\ref{eq:Lx}.} \label{fig:Mdot}}
 \end{figure}
 A fitting function has been overplotted with a dashed line, which shows the linear dependence of the mass-loss rate as a function of stellar mass. This linear trend is in contrast with the flat distribution as a function of stellar mass ($\propto \mathrm{M}_\star^{-0.068}$) obtained by \citetads{2012MNRAS.422.1880O}, but there the X-ray luminosity was kept constant while changing the stellar mass (see Section~\ref{sec:mass-dependance} for a proper comparison). Furthermore, the linear trend doesn't show the flattening of the mass-loss rates observed for large X-ray luminosity in \citetalias{2019MNRAS.487..691P} because even the \SI{1}{\solarmass} star has an X-ray luminosity of $\log(L_X) = 30.3$, which is smaller than the saturation value observed in the previous study.
 The best fitting function obtained from the current study is
@@ -391,7 +391,7 @@ We show in Figure~\ref{fig:cumdotMtest} the cumulative mass-loss rate for the di
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{Figure8}
-  \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last 50 orbital timescales at \SI{10}{\astronomicalunit}, keeping the X-ray luminosity fixed. A linear fit has been overplotted with a dot-dashed line, as well as the prediction from \citepads{2012MNRAS.422.1880O} in a dotted line. \label{fig:cumdotMtest}}
+  \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last 50 orbital timescales at \SI{10}{\astronomicalunit}, keeping the X-ray luminosity fixed. A linear fit has been overplotted with a dot-dashed line, as well as the prediction from \citepads{2012MNRAS.422.1880O} in a dotted line.\label{fig:cumdotMtest}}
 \end{figure}
 We see that also in this case the mass-loss rate is not flat, in contrast to what was observed in \citetads{2012MNRAS.422.1880O}. The reason is again the difference in the disc flaring which allows larger mass stars to reach further regions in the disc, generating a large mass flux. However, the dependence of the mass-loss rate as a function of the pure stellar mass becomes much more shallow, increasing only by a factor $3$ from \SI{0.1}{\solarmass} to \SI{1}{\solarmass} instead of an order of magnitude as shown in Figure~\ref{fig:Mdot}.
 The linear fit that matches the data shown in Figure~\ref{fig:cumdotMtest} is
@@ -507,7 +507,8 @@ An interesting star forming region to test the validity of our observational pre
 \end{equation}
 where $t_\mathrm{age} = 5\, \mathrm{Myr}$ \citepads{2011A&A...536A..63B}.
 
-In Fig.~\ref{fig:obs} we directly compared the observational data points derived from \citetads{2012A&A...547A..80B} in grey, with the disc lifetime obtained from eqs.~\ref{eq:MdotLxMass}, \ref{eq:tlife} in sea-green and, for comparison, in light-green the result using the photoeavaporative mass-loss rate from eq.~B1 of \citetads{2012MNRAS.422.1880O}. The shaded region represents the uncertainty in the observational relation between the accretion rates and stellar masses.
+In Fig.~\ref{fig:obs} we directly compared the observational data points derived from \citetads{2012A&A...547A..80B} in grey, with the disc lifetime obtained from eqs.~\ref{eq:MdotLxMass}, \ref{eq:tlife} in sea-green and, for comparison, in light-green the result using the photoeavaporative mass-loss rate from eq.~B1 of \citetads{2012MNRAS.422.1880O}. \textbf{The shaded region represents the uncertainty in the observational relation between the accretion rates and stellar masses (equation~
+\ref{eq:mdotAlcala}) and that in the X-ray luminosity as a function of stellar mass (equation~\ref{eq:Lx}). The sharp increase of the shaded regions for stars $<$ \SI{0.2}{\solarmass} is mainly caused by the large uncertainty of equation~\ref{eq:mdotAlcala} for small mass stars.}
 
 In order to get the best fit to the observation we used a linear relation between the initial disc mass and stellar mass and a initial value of \SI{0.14}{\mathrm{M}_\star} for the current models and \SI{0.06}{\mathrm{M}_\star} for \citetads{2012MNRAS.422.1880O}.
 \citetads{2013ApJ...771..129A} found a roughly linear relationship between the disc mass and stellar mass, studying a large sample of Class~II discs. More recently \citetads{2016ApJ...831..125P}, studying a few young star forming regions, found a slightly steeper than linear dust disc mass - stellar mass relationship, though including in the sample also the brown dwarfs linearizes it again \citepads{2021arXiv210605247R}.
@@ -526,7 +527,9 @@ The results match very well the observations for the whole range of explored mas
   We found that
 
    \begin{enumerate}
-      \item stellar mass and irradiation have a strong impact on the underlying disc structure, changing the disc aspect ratio and causing a large flaring for low X-ray luminosities/small masses, which affects the density and temperature in the wind region (see Figure~\ref{fig:discs});
+      \item \textbf{stellar mass and bolometric luminosity have a strong impact on the underlying disc structure, changing its aspect ratio (see Figures~\ref{fig:initdiscs},\ref{fig:aspectratio}). 
+      As a result, on the one hand the X-ray irradiation can penetrate deeper into the disc for smaller mass stars, generating denser and colder winds (see Figures~\ref{fig:discs},\ref{fig:sonicsurf}). On the other hand, the flatter discs around high mass stars allow the stellar irradiation to reach larger radii and generate more massive winds (see Figure~\ref{fig:mdotevol})};
+      %stellar mass and irradiation have a strong impact on the underlying disc structure, changing the disc aspect ratio and causing a large flaring for low X-ray luminosities/small masses, which affects the density and temperature in the wind region (see Figure~\ref{fig:discs});
       \item we provide fitting functions in Table~\ref{tab:fit} for the surface mass-loss rate profiles for different stellar masses whose luminosity is scaled based on equation~\ref{eq:Lx} that can be readily applied to disc and planet population synthesis codes;
       \item the resulting cumulative mass loss rate scales linearly with the stellar mass (see equation~\ref{eq:MdotLxMass});
       \item the temperature as a function of the gravitational radius at the sonic surface scales linearly with the stellar mass (see Figure~\ref{fig:sonicsurfrescaled});
@@ -538,7 +541,7 @@ The results match very well the observations for the whole range of explored mas
 
 \section*{Acknowledgements}
 
-    GP acknowledges support from the DFG Research Unit ‘Transition Disks’ (FOR 2634/1, ER 685/8-1).
+    GP acknowledges support from the DFG Research Unit ‘Transition Disks’ (FOR 2634/2, ER 685/8-2).
     This work was performed on the computing facilities of the Computational Center for Particle and Astrophysics (C2PAP).
     This research was supported by the Excellence Cluster ORIGINS which is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-2094 - 390783311.
     This paper utilizes the D’Alessio Irradiated Accretion Disk (DIAD) code. We wish to recognize the work of Paola D’Alessio, who passed away in 2013. Her legacy and pioneering work live on through her substantial contributions to the field.
