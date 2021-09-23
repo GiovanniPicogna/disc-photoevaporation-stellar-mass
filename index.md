@@ -1,3 +1,4 @@
+usemathjax: true
 ## The dispersal of protoplanetary discs. – III: Influence of stellar mass ondisc photoevaporation
 
 ### Abstract
