@@ -1,4 +1,4 @@
-# minima
+# Influence of stellar mass on disc photoevaporation
 
 ## Abstract
 
