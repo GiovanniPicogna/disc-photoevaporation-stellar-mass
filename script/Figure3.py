@@ -50,11 +50,11 @@ labels = [
     r"\texttt{0.7Msun}",
     r"\texttt{1Msun}",
 ]
-colors = ["black", "dimgrey", "grey", "darkgrey", "lightgrey"]
-linestyles = ["-", "-.", ":", "--", "--"]
+colors = ["black", "black", "black", "darkgrey", "black"]
+linestyles = ["-", ":", "-.", "-", "--"]
 fig = plt.figure()
 for i in range(5):
-    plt.plot(data[i], color=colors[i], label=labels[i])
+    plt.plot(data[i], color=colors[i], linestyle=linestyles[i], label=labels[i])
 plt.ylabel(r"$\log_{10}(\mathrm{\dot{M}}_w\,\, [M_\odot\, \textrm{yr}^{-1}])$")
 plt.xlabel(r"t [orbits @ 10 au]")
 plt.yscale("log")
