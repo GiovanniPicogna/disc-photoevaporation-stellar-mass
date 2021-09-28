@@ -33,7 +33,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        cd scripts
+        cd ../../scripts
         pytest Figure2.py
         pytest Figure3.py
         pytest Figure4.py
