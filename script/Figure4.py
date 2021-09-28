@@ -1,65 +1,14 @@
 import numpy as np
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
 import os
 from astropy import constants as const
 from astropy import units as u
-
-import h5py as h
-
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (12, 6),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
+plt.rcParams.update({'figure.figsize': (12, 6)})
 
-
-def getFilenames():
-    print(os.getcwd())
-    filenames = [x for x in os.listdir("./") if ".h5" in x]
-    filenames.sort()
-    return filenames
-
-
-def getVar(filename, step, variable):
-    h5 = h.File(filename, "r")
-    returnData = h5["Timestep_" + str(step) + "/vars"][variable][:]
-    h5.close()
-    return returnData
-
-
-def getGridCell(filename=None, all=1):
-    if not (filename):
-        filename = getFilenames()[0]
-    h5 = h.File(filename, "r")
-    if all:
-        x = h5["cell_coords"]["X"][:]
-        y = h5["cell_coords"]["Y"][:]
-        z = h5["cell_coords"]["Z"][:]
-    else:
-        x = h5["cell_coords"]["X"]
-        y = h5["cell_coords"]["Y"]
-        z = h5["cell_coords"]["Z"]
-    x = x.astype("float64")
-    y = y.astype("float64")
-    z = z.astype("float64")
-    return x, y, z
-
+from functions import getFilenames, getVar, getGridCell
 
 rscale = 10.0 * u.AU
 mscale = 1.0 * u.solMass
@@ -67,8 +16,6 @@ vscale = np.sqrt(const.G * mscale / rscale) / 2.0 / np.pi
 rhoscale = mscale / rscale ** 3
 mu = 2.35
 
-width = 12
-height = 6
 fig = plt.figure()
 gs = fig.add_gridspec(nrows=2, ncols=4, hspace=0, wspace=0)
 ax = gs.subplots(sharex=True, sharey=True)
@@ -83,7 +30,6 @@ labels = ["\\texttt{0.1Msun}", "\\texttt{0.3Msun}", "\\texttt{0.5Msun}", "\\text
 Mstar = [0.1, 0.3, 0.5, 1.0]
 index_max = [415, 470, 452, 553]
 
-xticks1 = np.arange(0, 21, 5)
 xticks = np.arange(0, 21, 5)
 os.chdir("../data/PLUTO/")
 for i in range(2):
@@ -164,7 +110,6 @@ for i in range(2):
         os.chdir("../")
 
 plt.tight_layout(pad=0.0)
-fig.set_size_inches(width, height)
 
 os.chdir("../../script")
 fig.savefig("Figure4.png", bbox_inches="tight", dpi=400)

@@ -1,63 +1,12 @@
 import os
 import numpy as np
-import h5py as h
 from astropy import constants as const
 from astropy import units as u
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (7, 4.5),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
+from functions import getFilenames, getVar, getGridCell
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
-
-
-def getFilenames():
-    print(os.getcwd())
-    filenames = [x for x in os.listdir("./") if ".h5" in x]
-    filenames.sort()
-    return filenames
-
-
-def getVar(filename, step, variable):
-    h5 = h.File(filename, "r")
-    returnData = h5["Timestep_" + str(step) + "/vars"][variable][:]
-    h5.close()
-    return returnData
-
-
-def getGridCell(filename=None, all=1):
-    if not (filename):
-        filename = getFilenames()[0]
-    h5 = h.File(filename, "r")
-    if all:
-        x = h5["cell_coords"]["X"][:]
-        y = h5["cell_coords"]["Y"][:]
-        z = h5["cell_coords"]["Z"][:]
-    else:
-        x = h5["cell_coords"]["X"]
-        y = h5["cell_coords"]["Y"]
-        z = h5["cell_coords"]["Z"]
-    x = x.astype("float64")
-    y = y.astype("float64")
-    z = z.astype("float64")
-    return x, y, z
-
+plt.style.use('figures.mplstyle')
 
 os.chdir("../data/PLUTO/01Msun/")
 files = getFilenames()[:]
@@ -153,8 +102,6 @@ def radius1d10(tvalue, rmin, rmax):
 
 
 labels = [r"\texttt{0.1Msun}", r"\texttt{0.3Msun}", r"\texttt{0.5Msun}", r"\texttt{1Msun}"]
-width = 7
-height = 4.5
 
 fig, ax = plt.subplots()
 r1 = radius1d1(DIMT1 - 1, 0, DIMR1 - 1)
@@ -208,7 +155,6 @@ ax.set_xlim((0.0, 40))
 ax.set_ylim(0.03, 0.25)
 
 plt.legend(prop={"size": 14}, loc="upper left")
-fig.set_size_inches(width, height)
 os.chdir("../../../script")
 plt.savefig("Figure5.pdf", bbox_inches="tight", dpi=400)
 plt.close(fig)

@@ -3,61 +3,14 @@ import numpy as np
 import h5py as h
 from astropy import constants as const
 from astropy import units as u
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (7, 4.5),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
+from functions import Sigmadot
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
-
-
-def Sigmadot(a, b, c, d, e, f, g, Rau):
-    logR = np.log10(Rau)
-    lnx = np.log(Rau)
-    ln10 = np.log(10)
-    return (
-        ln10
-        * (
-            6 * a * lnx ** 5 / (Rau * ln10 ** 6)
-            + 5 * b * lnx ** 4 / (Rau * ln10 ** 5)
-            + 4 * c * lnx ** 3 / (Rau * ln10 ** 4)
-            + 3 * d * lnx ** 2 / (Rau * ln10 ** 3)
-            + 2 * e * lnx / (Rau * ln10 ** 2)
-            + f / (Rau * ln10)
-        )
-        * 10
-        ** (
-            a * logR ** 6
-            + b * logR ** 5
-            + c * logR ** 4
-            + d * logR ** 3
-            + e * logR ** 2
-            + f * logR
-            + g
-        )
-    )
-
+plt.style.use('figures.mplstyle')
 
 Mstar = [0.1, 0.3, 0.5, 1.0]
 
-width = 7
-height = 4.5
 fig, ax = plt.subplots(ncols=1, nrows=1)
 labels = [r"\texttt{0.1Msun}", r"\texttt{0.3Msun}", r"\texttt{0.5Msun}", r"\texttt{1Msun}"]
 Mdot = [
@@ -184,7 +137,6 @@ plt.ylabel(r"$\dot{\Sigma}_w$ [g cm$^{-2}$ s$^{-1}$]")
 plt.legend(loc=1)
 
 plt.tight_layout(pad=0.0)
-fig.set_size_inches(width, height)
 
 plt.savefig("Figure7a.pdf", bbox_inches="tight", dpi=400)
 plt.close(fig)

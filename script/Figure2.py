@@ -1,48 +1,12 @@
 import numpy as np
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
 import os
-
 from lmfit import Model, Parameters
-
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (7, 4.5),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
 
-
-def xiT(x, b, c, d, m):
-    T = d + (1.5 - d) / (1 + (x / c) ** b) ** m
-    return T
-
-
-def interpPicog29(x, b, c, d, m):
-    return d + (1.5 - d) / (1.0 + (x / c) ** b) ** m
-
-
-def interpPicog30(x, b, c, d, m):
-    return d + (1.6 - d) / (1.0 + (x / c) ** b) ** m
-
-
-def interpPicog31(x, b, c, d, m):
-    return d + (1.7 - d) / (1.0 + (x / c) ** b) ** m
-
+from functions import xiT,interpPicog29,interpPicog30,interpPicog31
 
 Te29 = np.zeros((34, 40))
 xi29 = np.zeros((34, 40))
@@ -141,19 +105,6 @@ for i in range(40):
     dval29[i] = result.best_values["d"]
     mval29[i] = result.best_values["m"]
 
-    # f = open("dat" + str(n) + "fit.dat", "a")
-    # f.write(
-    #    str(bval29[i])
-    #    + " "
-    #    + str(cval29[i])
-    #    + " "
-    #    + str(dval29[i])
-    #    + " "
-    #    + str(mval29[i])
-    #    + "\n"
-    # )
-    # f.close()
-
 b = -26.5735278
 c = -6.59234502
 d = 4.03588632
@@ -213,18 +164,6 @@ for i in range(40):
     cval30[i] = result.best_values["c"]
     dval30[i] = result.best_values["d"]
     mval30[i] = result.best_values["m"]
-    # f = open("dat" + str(n) + "fit.dat", "a")
-    # f.write(
-    #    str(bval30[i])
-    #    + " "
-    #    + str(cval30[i])
-    #    + " "
-    #    + str(dval30[i])
-    #    + " "
-    #    + str(mval30[i])
-    #    + "\n"
-    # )
-    # f.close()
 
 b = -26.5735278
 c = -6.59234502
@@ -288,19 +227,6 @@ for i in range(40):
     dval31[i] = result.best_values["d"]
     mval31[i] = result.best_values["m"]
 
-    # f = open("dat" + str(n) + "fit.dat", "a")
-    # f.write(
-    #    str(bval31[i])
-    #    + " "
-    #    + str(cval31[i])
-    #    + " "
-    #    + str(dval31[i])
-    #    + " "
-    #    + str(mval31[i])
-    #    + "\n"
-    # )
-    # f.close()
-
 xi = np.linspace(-8, -2, 100)
 ba = [-53.6260, -33.4958, -36.0245]
 ca = [-5.8336, -5.4189, -5.2231]
@@ -350,9 +276,7 @@ legend = [
 ]
 lines = ["-", "--", ":"]
 
-width = 7
-height = 4.5
-fig = plt.figure(figsize=((width, height)))
+fig = plt.figure()
 k = 0
 for i in [0, 1, 15]:
     plt.plot(
@@ -396,5 +320,4 @@ plt.xlabel("$\\log_{10}(\\xi)$", size=14.0)
 plt.ylabel("$\\log_{10}$(T [K])", size=14.0)
 # Manually add the first legend back
 fig.add_artist(leg1)
-fig.set_size_inches(width, height)
 plt.savefig("Figure2.pdf", bbox_inches="tight", dpi=400)

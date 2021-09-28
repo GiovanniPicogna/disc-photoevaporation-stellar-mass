@@ -4,29 +4,10 @@ from astropy import units as u
 from astropy import constants as const
 from scipy.interpolate import griddata
 import matplotlib.pyplot as plt
-
-import matplotlib as mpl
-
-mpl.use("pdf")
-
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (12, 6),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
+plt.rcParams.update({'figure.figsize': (12, 6)})
 
 basepath = "../data/DIAD/"
 files = [
@@ -38,21 +19,13 @@ files = [
 Rstars = [1.055, 2.31, 2.125, 2.615]
 Mstars = [0.1, 0.3, 0.5, 1.0]
 
-width = 12
-height = 6
 fig = plt.figure()
 gs = fig.add_gridspec(nrows=2, ncols=4, hspace=0, wspace=0)
 ax = gs.subplots(sharex=True, sharey=True)
 
-base_path = "/e/arch/users/picogna/Photoevaporation/Mass/"
-dirs = ["Final/01Msun", "Final/03Msun", "Final/05Msun", "Final/1Msun"]
 labels = ["\\texttt{0.1Msun}", "\\texttt{0.3Msun}", "\\texttt{0.5Msun}", "\\texttt{1Msun}"]
-Mstar = [0.1, 0.3, 0.5, 1.0]
-index_max = [415, 470, 452, 553]
 
-xticks1 = np.arange(0, 21, 5)
 xticks = np.arange(0, 21, 5)
-print(xticks)
 
 for i in range(2):
     for j in range(4):
@@ -169,6 +142,5 @@ for i in range(2):
             fig.colorbar(plot, ax=ax[i, j], cax=cax, label=labelplot)
 
 plt.tight_layout(pad=0.0)
-fig.set_size_inches(width, height)
 fig.savefig("Figure1.png", bbox_inches="tight", dpi=400)
 plt.close(fig)

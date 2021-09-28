@@ -3,32 +3,10 @@ import numpy as np
 import h5py as h
 from astropy import constants as const
 from astropy import units as u
-import matplotlib as mpl
 import pandas as pd
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
 
-width = 7.0
-height = 4.5
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (width, height),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
-from matplotlib import rc
-
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
 
 data = {
     "Stellar mass": [
@@ -119,7 +97,7 @@ def life_time_Alcala(Mstar, LX, alpha1, beta1, alpha2, beta2, age, profile):
 
 
 Mstars = np.asarray([0.1, 0.3, 0.5, 0.7, 1.0])
-LX = np.asarray([0.059, 0.32, 0.702, 1.179, 2.04])
+LX = np.asarray([0.059e30, 0.32e30, 0.702e30, 1.179e30, 2.04e30])
 Mstars_arr = np.asarray(np.linspace(0.1, 1.0, 10))
 LX_arr = 10 ** (1.54 * np.log10(Mstars_arr) + 30.31)
 idx_disk = 0.99
@@ -174,7 +152,7 @@ plt.plot(
     ".",
     ms=20,
     color="grey",
-    label="$\lambda$-Ori [5 Myr, Bayo+ 2012]",
+    label="$\lambda$ Ori [5 Myr, Bayo+ 2012]",
 )
 
 labels = [r"$\alpha = 0.99$", r"$\alpha = 1.13$", r"$\alpha = 1.10$"]
@@ -248,5 +226,4 @@ plt.legend()
 plt.yscale("log")
 
 plt.tight_layout(pad=0.0)
-fig1.set_size_inches(width, height)
 plt.savefig("Figure11.pdf", bbox_inches="tight", dpi=400)

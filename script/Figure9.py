@@ -3,31 +3,14 @@ import numpy as np
 import h5py as h
 from astropy import constants as const
 from astropy import units as u
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (7, 9),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
+from functions import moving_average
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
 
-width = 7
-height = 9
+plt.rcParams.update({'figure.figsize': (7, 9)})
+
 fig, ax = plt.subplots(2, 1, sharey=False, sharex=True)
 fig.subplots_adjust(left=0.15, bottom=0.16, right=0.99, top=0.97)
 dirs = [
@@ -40,11 +23,6 @@ Mstar = [0.1, 0.3, 0.5, 1.0]
 labels = [r"\texttt{0.1Msun}", r"\texttt{0.3Msun}", r"\texttt{0.5Msun}", r"\texttt{1Msun}"]
 colors = ["blue", "red", "orange", "green"]
 mu = 1.4
-
-
-def moving_average(x, w):
-    return np.convolve(x, np.ones(w), "valid") / w
-
 
 window = 150
 os.chdir("../")
@@ -87,5 +65,4 @@ for j in range(2):
             ax[j].legend()
         os.chdir("../../../")
 plt.tight_layout(pad=0.0)
-fig.set_size_inches(width, height)
 plt.savefig("script/Figure9.pdf", bbox_inches="tight", dpi=400)

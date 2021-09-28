@@ -3,48 +3,11 @@ import numpy as np
 import h5py as h
 from astropy import constants as const
 from astropy import units as u
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
-width = 7
-height = 4.5
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (width, height),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
+from functions import sci_notation
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
-
-def sci_notation(num, decimal_digits=1, precision=None, exponent=None):
-    """
-    Returns a string representation of the scientific
-    notation of the given number formatted for use with
-    LaTeX or Mathtext, with specified number of significant
-    decimal digits and precision (number of decimal digits
-    to show). The exponent to be used can also be specified
-    explicitly.
-    """
-    if exponent is None:
-        exponent = int(np.floor(np.log10(abs(num))))
-    coeff = round(num / float(10 ** exponent), decimal_digits)
-    if precision is None:
-        precision = decimal_digits
-
-    return r"${0:.{2}f}\cdot10^{{{1:d}}}$".format(coeff, exponent, precision)
+plt.style.use('figures.mplstyle')
 
 mdot01 = np.loadtxt("../data/PLUTO/test_mass/01Msun/mdot_ave.dat")
 mdot03 = np.loadtxt("../data/PLUTO/test_mass/03Msun/mdot_ave.dat")
@@ -84,7 +47,6 @@ ax1.legend(loc=2, fontsize=14)
 yticks = [5e-9, 1e-8, 2e-8]
 ax1.set_yticks(yticks)
 ax1.set_yticklabels([sci_notation(y, decimal_digits=0) for y in yticks])
-# use LaTeX formatted labels
+
 plt.tight_layout(pad=0.0)
-fig1.set_size_inches(width, height)
 plt.savefig("Figure8.pdf", bbox_inches="tight", dpi=400)

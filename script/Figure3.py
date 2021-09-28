@@ -1,26 +1,8 @@
 import numpy as np
-import matplotlib as mpl
-
-mpl.use("pdf")
 import matplotlib.pyplot as plt
-import matplotlib.pylab as pylab
-
-params = {
-    "legend.fontsize": "x-large",
-    "figure.figsize": (7, 4.5),
-    "axes.labelsize": "x-large",
-    "axes.titlesize": "x-large",
-    "xtick.labelsize": "x-large",
-    "ytick.labelsize": "x-large",
-}
-pylab.rcParams.update(params)
 from matplotlib import rc
 
-rc("font", **{"family": "sans-serif"})
-rc("text", usetex=True)
-rc("xtick", labelsize=14.0)
-rc("ytick", labelsize=14.0)
-rc("axes", labelsize=14.0)
+plt.style.use('figures.mplstyle')
 
 mdot01 = np.loadtxt("../data/PLUTO/01Msun/mdot_ave.dat")
 mdot03 = np.loadtxt("../data/PLUTO/03Msun/mdot_ave.dat")
@@ -40,9 +22,7 @@ mdot07 = mdot07 / frac
 
 data = [mdot01, mdot03, mdot05, mdot07, mdot10]
 
-width = 7
-height = 4.5
-fig = plt.figure(figsize=((width, height)))
+fig = plt.figure()
 labels = [
     r"\texttt{0.1Msun}",
     r"\texttt{0.3Msun}",
@@ -61,6 +41,5 @@ plt.yscale("log")
 plt.legend(ncol=2, loc="lower right")
 plt.xlim(0, 300)
 
-fig.set_size_inches(width, height)
 plt.savefig("Figure3.pdf", bbox_inches="tight", dpi=400)
 plt.close(fig)
