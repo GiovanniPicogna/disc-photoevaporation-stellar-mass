@@ -1,0 +1,8 @@
+legend.fontsize: x-large
+figure.figsize: 7, 4.5
+axes.titlesize: x-large
+font.family: sans-serif
+text.usetex: True
+axes.labelsize: 14
+ytick.labelsize: 14
+xtick.labelsize: 14
