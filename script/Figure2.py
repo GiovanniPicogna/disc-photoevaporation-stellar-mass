@@ -10,7 +10,7 @@ from functions import xiT,interpPicog29,interpPicog30,interpPicog31
 
 Te29 = np.zeros((34, 40))
 xi29 = np.zeros((34, 40))
-filepath = "../data/MOCASSIN/idloutput_baspec29_highres_moremean.dat"
+filepath = "data/MOCASSIN/idloutput_baspec29_highres_moremean.dat"
 with open(filepath, "r") as fp:
     for j in range(40):
         line = fp.readline()
@@ -22,7 +22,7 @@ with open(filepath, "r") as fp:
 
 Te30 = np.zeros((34, 40))
 xi30 = np.zeros((34, 40))
-filepath = "../data/MOCASSIN/idloutput_baspec30_highres_moremean.dat"
+filepath = "data/MOCASSIN/idloutput_baspec30_highres_moremean.dat"
 with open(filepath, "r") as fp:
     for j in range(40):
         fp.readline()
@@ -34,7 +34,7 @@ with open(filepath, "r") as fp:
 
 Te31 = np.zeros((34, 40))
 xi31 = np.zeros((34, 40))
-filepath = "../data/MOCASSIN/idloutput_baspec31_highres_moremean.dat"
+filepath = "data/MOCASSIN/idloutput_baspec31_highres_moremean.dat"
 with open(filepath, "r") as fp:
     for j in range(40):
         fp.readline()
