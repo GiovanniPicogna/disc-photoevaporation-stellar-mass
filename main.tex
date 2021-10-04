@@ -137,11 +137,11 @@ $^{3}$Department of Astronomy \& Institute for Astrophysical Research, Boston Un
 % Abstract of the paper
 \begin{abstract}
 The strong X-ray irradiation from young solar-type stars may play a crucial role in the thermodynamics and chemistry of circumstellar discs, driving their evolution in the last stages of disc dispersal as well as shaping the atmospheres of newborn planets.
-In this paper we study the influence of stellar mass on \textbf{circumstellar disc} mass-loss rates due to X-ray irradiation, extending our previous study of the mass-loss rate's dependence on the X-ray luminosity and spectrum hardness. We focus on stars with masses between $0.1$ and \SI{1}{\solarmass}, which are the main target of current and future missions to find potentially habitable planets.
-We \textbf{find} a linear relationship between the mass-loss rates and the stellar masses when changing the X-ray luminosity accordingly with the stellar mass.
+In this paper we study the influence of stellar mass on circumstellar disc mass-loss rates due to X-ray irradiation, extending our previous study of the mass-loss rate's dependence on the X-ray luminosity and spectrum hardness. We focus on stars with masses between $0.1$ and \SI{1}{\solarmass}, which are the main target of current and future missions to find potentially habitable planets.
+We find a linear relationship between the mass-loss rates and the stellar masses when changing the X-ray luminosity accordingly with the stellar mass.
 This linear increase is observed also when the X-ray luminosity is kept fixed because of the lower disc aspect ratio which allows the X-ray irradiation to reach larger radii.
 We provide new analytical relations for the mass-loss rates and profiles of photoevaporative winds as a function of the stellar mass that can be used in disc and planet population synthesis models.
-Our photoevaporative models correctly predict the observed trend of \textbf{inner-}disc lifetime as a function of stellar mass with an increased steepness for stars smaller than \SI{0.3}{\solarmass}, indicating that X-ray photoevaporation is a good candidate to explain the observed \textbf{disc dispersal process}.
+Our photoevaporative models correctly predict the observed trend of inner-disc lifetime as a function of stellar mass with an increased steepness for stars smaller than \SI{0.3}{\solarmass}, indicating that X-ray photoevaporation is a good candidate to explain the observed disc dispersal process.
 \end{abstract}
 
 % Select between one and six entries from the list of approved keywords.
@@ -182,7 +182,7 @@ In Section~\ref{sec:methods} we briefly discuss the numerical set-up adopted, fo
 We run a series of hydrodynamical simulations following the approach outlined in \citetalias{2019MNRAS.487..691P} that we briefly describe here for completeness.
 
 The initial set-up is based on the gas densities and dust temperatures from the hydrostatic disc models from the D’Alessio Irradiated Accretion Disk (\textsc{diad}) radiative transfer models \citepads{1998ApJ...500..411D,1999ApJ...527..893D,2001ApJ...553..321D,2005ApJ...621..461D,2006ApJ...638..314D}, that best fit the median spectral energy distribution (SED) in Taurus. 
-For this particular study a different set-up is adopted for each individual stellar mass, based on its mass and bolometric luminosity (see Fig.~\ref{fig:initdiscs}).
+For this particular study a different set-up is adopted for each individual stellar mass, based on its mass and bolometric luminosity (see Figure~\ref{fig:initdiscs}).
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{Figure1}
@@ -191,7 +191,7 @@ For this particular study a different set-up is adopted for each individual stel
 The stellar parameters were obtained from \citetads{2000A&A...358..593S} for an age of \SI{1}{Myr}, and a metallicity $Z=0.02$ without overshooting.
 
 We then ran the gas photoionization and dust radiative transfer code \textsc{mocassin} \citepads{2003MNRAS.340.1136E,2005MNRAS.362.1038E,2008ApJS..175..534E}, that solves the heating and cooling terms for various physical and irradiation properties at thermal equilibrium, to obtain a temperature prescription in the upper layers of the discs when irradiated by an X(EUV) stellar spectrum.
-We adopted X-ray luminosities \textbf{scaled as a function of} stellar mass following \citetads{2007A&A...468..353G}
+We adopted X-ray luminosities scaled as a function of stellar mass following \citetads{2007A&A...468..353G}
 \begin{equation}\label{eq:Lx}
 	\log_{10}{(\mathrm{L}_X)} = (1.54 \pm 0.12) \log_{10}{(\mathrm{M}_\star)} + (30.31 \mp 0.06)\,,
 \end{equation}
@@ -204,7 +204,7 @@ It relates the local gas temperature to the column density to the central star (
 \end{equation}
 where $L_X$ is the X-ray luminosity, $n$ the number density, and $r$ the spherical radius from the central star. We compared it for completeness with the previously derived temperature prescription (used in \citetalias{2019MNRAS.487..691P}) obtained for a star with $L_X=\SI{2e30}{erg.s^{-1}}$ in \citetads{2008ApJS..175..534E}.
 
-Finally we ran a set of hydrodynamical simulations with a \textbf{modified} version of the \textsc{pluto} code \citepads{2007ApJS..170..228M} \textbf{presented} in \citetalias{2019MNRAS.487..691P}, in order to use the temperature prescription from \textsc{mocassin} for column densities lower than the maximum penetration depth of X-rays (\SI{\sim 2e22}{pp.cm^{-2}}), and a perfect coupling between gas and dust temperatures using the \textsc{diad} models for larger column densities.
+Finally we ran a set of hydrodynamical simulations with a modified version of the \textsc{pluto} code \citepads{2007ApJS..170..228M} presented in \citetalias{2019MNRAS.487..691P}, in order to use the temperature prescription from \textsc{mocassin} for column densities lower than the maximum penetration depth of X-rays (\SI{\sim 2e22}{pp.cm^{-2}}), and a perfect coupling between gas and dust temperatures using the \textsc{diad} models for larger column densities.
 We evolve the models until a steady state is reached for the disc structure and the gas streamlines in the wind.
 
 We modelled $4$ different stellar masses, ranging from \SI{0.1}{\solarmass} to \SI{1}{\solarmass} which, together with the \SI{0.7}{\solarmass} studied in \citetalias{2019MNRAS.487..691P}, allow us to study in detail the stellar mass dependence on the mass-loss rates due to photoevaporative winds in T Tauri stars. The initial parameters adopted in the different runs are summarised in Table~\ref{tab:stars}.
@@ -243,15 +243,15 @@ We initially evolve the system for few orbits at \SI{10}{au} without stellar irr
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Figure3}
-    \caption{Cumulative mass-loss rate evolution as a function of time for the different stellar mass models. \textbf{We included with a dark grey solid line the \SI{0.7}{\solarmass} run from \citetalias{2019MNRAS.487..691P}, rescaled to have the same X-ray luminosity from equation~
-    \ref{eq:Lx}}. \label{fig:mdotevol}}
+    \caption{Cumulative mass-loss rate evolution as a function of time for the different stellar mass models. We included with a dark grey solid line the \SI{0.7}{\solarmass} run from \citetalias{2019MNRAS.487..691P}, rescaled to have the same X-ray luminosity from equation~
+    \ref{eq:Lx}. \label{fig:mdotevol}}
 \end{figure}
 
 %-------------------------------------------------------------------
 \section{Results}\label{sec:results}
 %-------------------------------------------------------------------
 
-There are two main locations that are \textbf{of central importance} in the study of photoevaporative winds.
+There are two main locations that are of central importance in the study of photoevaporative winds.
 
 (i) The gravitational radius $\mathrm{R}_g$, which defines the location where a gas parcel becomes unbound from the central star, equating the sound speed to the Keplerian speed (\citeads{1994ApJ...428..654H}, \citeads{2003PASA...20..337L}).
 \begin{eqnarray}\label{eq:rg}
@@ -259,7 +259,7 @@ There are two main locations that are \textbf{of central importance} in the stud
   &\simeq& 5.05 \left(\frac{T_0}{\SI{e4}{\kelvin}}\right)^{-1} \left(\frac{\mathrm{M}_\star}{\SI{1}{\solarmass}}\right) \ [\si{\astronomicalunit}] \,,
 \end{eqnarray}
 where $\gamma=5/3$ is the adiabatic index, $G$ the gravitational constant, $\mathrm{M}_\star$ the stellar mass, $\mu = 2.35$ the mean molecular weight, $m_H$ the proton mass, $k_B$ the Boltzmann constant, and $T_0$ is the temperature at the base of the flow, which is equal to \SI{e4}{\kelvin} for a pure EUV wind. 
-\textbf{\citetads{2012MNRAS.422.1880O} found analytically that the temperature in the flow should be fixed to first order by the stellar mass and thus be scale free when scaled by the gravitational radius}.
+\citetads{2012MNRAS.422.1880O} found analytically that the temperature in the flow should be fixed to first order by the stellar mass and thus be scale free when scaled by the gravitational radius.
 Thus we will scale in our analysis always (when not differently stated) the winds by this value, in order to study differences in the expected behaviour. We have to keep in mind that, since we are not treating an isothermal wind, the gravitational radius will not be a fixed cylindrical radius but an area where the temperature will increase due to X-ray irradiation winning over the gravitational pull from the central star. Nevertheless for simplicity in the rest of the paper we will refer to $\mathrm{R}_g$ assuming a fixed temperature of \SI{e4}{K}, typical of a isothermal EUV wind.
 
 (ii) The critical radius $\mathrm{R}_c$, which defines the location where the gas becomes supersonic, and for a Parker wind is 
@@ -268,10 +268,10 @@ Thus we will scale in our analysis always (when not differently stated) the wind
 \end{equation}
 where $c_s$ is the gas sound speed. The main assumptions of a Parker wind are that the outflow is steady, spherically symmetric and isothermal. Each streamline of the thermal wind will pass through its critical radius, forming a sonic surface which is fundamental in order to understand the properties of the photoevaporative wind. When we have the density and sound speed at the sonic surface we can determine the mass-flux in the entire flow as mass-flux is conserved (\citeads{1983ApJ...271...70B}, \citeads{2012MNRAS.422.1880O}).
 
-In this section we first discuss the effects of the irradiation from different stellar masses (and relative X-ray luminosities) on the global mass loss rates and the radial mass loss profiles obtained at steady state from our 2D hydrodynamic calculations. In the second part we isolate the effect of changing only the stellar mass (keeping fixed \textbf{the X-ray luminosity}) and compare it with previous studies.
+In this section we first discuss the effects of the irradiation from different stellar masses (and relative X-ray luminosities) on the global mass loss rates and the radial mass loss profiles obtained at steady state from our 2D hydrodynamic calculations. In the second part we isolate the effect of changing only the stellar mass (keeping fixed the X-ray luminosity) and compare it with previous studies.
 
 \subsection{Disc profiles}
-We show in Fig.~\ref{fig:discs} the gas temperature (top panel) and density (bottom panel) distribution for the different stellar masses at equilibrium.
+We show in Figure~\ref{fig:discs} the gas temperature (top panel) and density (bottom panel) distribution for the different stellar masses at equilibrium.
 \begin{figure*}
     \centering
     \includegraphics[width=\textwidth]{Figure4}
@@ -283,16 +283,16 @@ We show in Fig.~\ref{fig:discs} the gas temperature (top panel) and density (bot
     \caption{Initial disc aspect ratio for the runs reported in Tab.~\ref{tab:stars}. \label{fig:aspectratio}}
 \end{figure}
 Two main aspects can be seen in the observed profiles. 
-(i) The disc aspect ratio is strongly dependant on the stellar mass, and it is not affected by X-ray photoevaporation (comparing the bottom panels of Figures \ref{fig:discs} and \ref{fig:initdiscs}), \textbf{as the X-rays} cannot reach the deeper dense regions of the disc until the mass accretion rate becomes comparable to the photoevaporative \textbf{mass-loss} rate. We show this in a more quantitative way in Figure~\ref{fig:aspectratio}, where we plot the disc aspect ratio as a function of radius for the different stellar masses. Within \SI{40}{R_g} the disc flaring changes from \SI{0.1}{\solarmass} with a disc aspect ratio of $h/r = 0.096 \cdot r^{0.25}$ to \SI{1}{\solarmass} with $h/r = 0.036 \cdot r^{0.3}$. The larger disc flaring for low stellar masses affects the vertical location of the maximum penetration depth of X-rays (shown in Figure~\ref{fig:discs} as a red dashed line) which shifts further away from the disc mid-plane.
+(i) The disc aspect ratio is strongly dependant on the stellar mass, and it is not affected by X-ray photoevaporation (comparing the bottom panels of Figures \ref{fig:discs} and \ref{fig:initdiscs}), as the X-rays cannot reach the deeper dense regions of the disc until the mass accretion rate becomes comparable to the photoevaporative mass-loss rate. We show this in a more quantitative way in Figure~\ref{fig:aspectratio}, where we plot the disc aspect ratio as a function of radius for the different stellar masses. Within \SI{40}{R_g} the disc flaring changes from \SI{0.1}{\solarmass} with a disc aspect ratio of $h/r = 0.096 \cdot r^{0.25}$ to \SI{1}{\solarmass} with $h/r = 0.036 \cdot r^{0.3}$. The larger disc flaring for low stellar masses affects the vertical location of the maximum penetration depth of X-rays (shown in Figure~\ref{fig:discs} as a red dashed line) which shifts further away from the disc mid-plane.
 (ii) The temperature structure in the wind region, even when rescaled by the gravitational radius, varies considerably for the different stellar masses, in contrast to what is predicted analytically in \citetads{2012MNRAS.422.1880O}, showing warmer winds for larger stellar masses and X-ray luminosities.
 
 \subsection{Mass-loss rates}\label{sec:mdot}
-We integrated the gas flow along the streamlines in the wind during the last \SI{50}{orbits} of each simulation and plotted the resulting cumulative mass-loss rates as a function of stellar masses in a square-box plot in Figure~\ref{fig:Mdot}, where we included also the run with a \SI{0.7}{\solarmass} star from \citetalias{2019MNRAS.487..691P}, which has been rescaled in order to have the same stellar mass--X-ray luminosity adopted in these runs following eq.~\ref{eq:Lx}.
+We integrated the gas flow along the streamlines in the wind during the last \SI{50}{orbits} of each simulation and plotted the resulting cumulative mass-loss rates as a function of stellar masses in a square-box plot in Figure~\ref{fig:Mdot}, where we included also the run with a \SI{0.7}{\solarmass} star from \citetalias{2019MNRAS.487..691P}, which has been rescaled in order to have the same stellar mass--X-ray luminosity adopted in these runs following equation~\ref{eq:Lx}.
 \begin{figure}
   \includegraphics[width=\columnwidth]{Figure6}
   \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last $50$ orbital timescales at \SI{10}{\astronomicalunit}. The derived linear fit is overplotted with a black dashed line, and a blue shaded region shows the variation in the mass-loss rate due to the uncertainty in the X-ray luminosity as a function of stellar mass in equation~\ref{eq:Lx}. \label{fig:Mdot}}
 \end{figure}
-A fitting function has been overplotted with a dashed line, which shows the linear dependence of the mass-loss rate as a function of stellar mass. This linear trend is in contrast with the flat distribution as a function of stellar mass ($\propto \mathrm{M}_\star^{-0.068}$) obtained by \citetads{2012MNRAS.422.1880O}, but there the X-ray luminosity was kept constant while changing the stellar mass (see Section~\ref{sec:mass-dependance} for a \textbf{detailed} comparison). Furthermore, the linear trend does not show the flattening of the mass-loss rates observed for large X-ray luminosity in \citetalias{2019MNRAS.487..691P} because even the \SI{1}{\solarmass} star has an X-ray luminosity of $\log(L_X) = 30.3$, which is smaller than the saturation value observed in the previous study.
+A fitting function has been overplotted with a dashed line, which shows the linear dependence of the mass-loss rate as a function of stellar mass. This linear trend is in contrast with the flat distribution as a function of stellar mass ($\propto \mathrm{M}_\star^{-0.068}$) obtained by \citetads{2012MNRAS.422.1880O}, but there the X-ray luminosity was kept constant while changing the stellar mass (see Section~\ref{sec:mass-dependance} for a detailed comparison). Furthermore, the linear trend does not show the flattening of the mass-loss rates observed for large X-ray luminosity in \citetalias{2019MNRAS.487..691P} because even the \SI{1}{\solarmass} star has an X-ray luminosity of $\log(L_X) = 30.3$, which is smaller than the saturation value observed in the previous study.
 The best fitting function obtained from the current study is
 \begin{equation}\label{eq:MdotLxMass}
   \dot{\mathrm{M}}_w = 3.93\times10^{-8} \left(\frac{\mathrm{M}_\star}{\si{\solarmass}}\right) [\si{\solarmass.yr^{-1}}]\,.
@@ -345,34 +345,34 @@ $\mathrm{M}_\star$ [\si{\solarmass}] & a & b & c & d & e & f & g & $\dot{\mathrm
 \end{table*}
 
 \subsection{Stellar mass dependence}\label{sec:mass-dependance}
-In order to isolate the effect of stellar mass on the photoevaporative mass-loss rates we performed a new set of simulations where we \textbf{fixed} the X-ray luminosity to the value of \SI{7e29}{erg.s^{-1}} (i.e. that of the \SI{0.5}{\solarmass} star).
+In order to isolate the effect of stellar mass on the photoevaporative mass-loss rates we performed a new set of simulations where we fixed the X-ray luminosity to the value of \SI{7e29}{erg.s^{-1}} (i.e. that of the \SI{0.5}{\solarmass} star).
 We show in Figure~\ref{fig:cumdotMtest} the cumulative mass-loss rate for the different stellar masses and we compare it with the prescription from \citetads{2012MNRAS.422.1880O}.
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{Figure8}
   \caption{Box plot of the cumulative mass-loss rate as a function of stellar mass over the last 50 orbital timescales at \SI{10}{\astronomicalunit}, keeping the X-ray luminosity fixed. A linear fit has been overplotted with a dot-dashed line, as well as the prediction from \citepads{2012MNRAS.422.1880O} in a dotted line.\label{fig:cumdotMtest}}
 \end{figure}
-We see that the mass-loss rate is not \textbf{independent of the stellar mass}, in contrast to what observed in \citetads{2012MNRAS.422.1880O}. However, the dependence on the stellar mass becomes much more shallow, increasing only by a factor $3$ from \SI{0.1}{\solarmass} to \SI{1}{\solarmass} instead of an order of magnitude as shown in Figure~\ref{fig:Mdot}. The linear fit that matches the data shown in Figure~\ref{fig:cumdotMtest} is
+We see that the mass-loss rate is not independent of the stellar mass, in contrast to what observed in \citetads{2012MNRAS.422.1880O}. However, the dependence on the stellar mass becomes much more shallow, increasing only by a factor $3$ from \SI{0.1}{\solarmass} to \SI{1}{\solarmass} instead of an order of magnitude as shown in Figure~\ref{fig:Mdot}. The linear fit that matches the data shown in Figure~\ref{fig:cumdotMtest} is
 \begin{equation}
     \dot{\mathrm{M}}_w = 2.34 \times 10^{-8} \left(\frac{\mathrm{M}_\star}{\si{\solarmass}}\right) + 6.23 \times 10^{-9} [\si{\solarmass.yr^{-1}}]\,.
 \end{equation}
-\textbf{To understand the origin of the stellar mass dependence we plotted in Figure~\ref{fig:SigmadotLx} the Surface mass-loss rate as a function of cylindrical radius for the different runs, which shows two main trends. An increase in the peak location and in the maximum reach as a function of stellar mass. 
+To understand the origin of the stellar mass dependence we plotted in Figure~\ref{fig:SigmadotLx} the Surface mass-loss rate as a function of cylindrical radius for the different runs, which shows two main trends. An increase in the peak location and in the maximum reach as a function of stellar mass. 
 The increased peak location is a direct consequence of the larger gravitational pull for more massive stars, which affects the location where eventually a gap will open in the disc. Although it scales linearly with stellar mass, it has little influence on the cumulative mass-loss rate since the disc mass scales as the square of the distance from the central star and the contribution from within the gravitational radius is negligible. Moreover \citetalias{2019MNRAS.487..691P} have shown that the cumulative mass-loss rate is insensitive to the inner hole radius for holes up to \SI{30}{\astronomicalunit} for a \SI{0.7}{\solarmass} star.
 The increased reach of the stellar irradiation is the main effect driving up the mass-loss rates, since for intermediate cylindrical radii the profiles are lying one on top of each other. The reason why the runs with larger mass stars have a further reach is purely geometrical, since flatter discs allow the radiation to reach larger cylindrical radii before being absorbed. The change in the disc flaring as a function of stellar mass comes from the increase in the stellar bolometric luminosity (affecting the dust temperature) and in the disc mass from the DIAD models (see Table~\ref{tab:stars}).
-}
+
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{Figure12}
   \caption{Surface density mass-loss rate profile as a function of cylindrical radius for the different simulations at fixed X-ray luminosity. \label{fig:SigmadotLx}}
 \end{figure}
 
-\textbf{Besides the change in the disc flaring, another difference between the runs (see Table~\ref{tab:stars}) is the disc mass. The bulk of the disc mass resides in the disc mid-plane which is not reachable by the stellar irradiation. However changing the disc mass affects the disc structure and thus the height at which the irradiation can penetrate. \citetads{2012MNRAS.422.1880O} found out that a variation in the disc mass was not changing the cumulative mass-loss rate, and more recently we confirmed this result in \citetads[][see their Figure~7]{2019MNRAS.490.5596W} where we saw a wind mass-loss rate independent of the disc mass for a large range of disc-to-star mass ratios and carbon abundances. We are thus confident that, at this stage of disc evolution, the disc mass is not affecting the cumulative wind mass-loss rate}.
+Besides the change in the disc flaring, another difference between the runs (see Table~\ref{tab:stars}) is the disc mass. The bulk of the disc mass resides in the disc mid-plane which is not reachable by the stellar irradiation. However changing the disc mass affects the disc structure and thus the height at which the irradiation can penetrate. \citetads{2012MNRAS.422.1880O} found out that a variation in the disc mass was not changing the cumulative mass-loss rate, and more recently we confirmed this result in \citetads[][see their Figure~7]{2019MNRAS.490.5596W} where we saw a wind mass-loss rate independent of the disc mass for a large range of disc-to-star mass ratios and carbon abundances. We are thus confident that, at this stage of disc evolution, the disc mass is not affecting the cumulative wind mass-loss rate.
 
 %-------------------------------------------------------------------
 \section{Discussion}\label{sec:discussion}
 %-------------------------------------------------------------------
 
-In this section we discuss the differences between the properties at the sonic surface in our model in comparison with the theoretical prediction for a Parker wind and previous numerical results. We then compare the \textbf{inner-}disc lifetime obtained from our model with observationally derived \textbf{one}.
+In this section we discuss the differences between the properties at the sonic surface in our model in comparison with the theoretical prediction for a Parker wind and previous numerical results. We then compare the inner-disc lifetime obtained from our model with observationally derived one.
 
 \subsection{Sonic surface}
 The local gas properties at the sonic surface are fundamental to understand the overall wind properties.
@@ -434,13 +434,13 @@ We can then use the current accretion rates to determine the initial accretion r
 which leaves us only with the free parameter of the initial disc mass $M_\mathrm{disc,0}$.
 
 An interesting star forming region to test the validity of our observational predictions is $\lambda$ Ori (also known as Collinder~$69$), since it has been extensively studied in X-ray emission \citepads{2011A&A...526A..21B}, and it seems to be at a critical age for disc dissipation (\SI{\sim 5}{\mega\year}).
-\citeads{2012A&A...547A..80B} obtained the cumulative disc fraction as a function of stellar mass from infrared excess observations of this open cluster, and we can convert this into an approximate \textbf{inner-}disc lifetime, following the approach of \citeads{2021ApJ...910...51K} as
+\citeads{2012A&A...547A..80B} obtained the cumulative disc fraction as a function of stellar mass from infrared excess observations of this open cluster, and we can convert this into an approximate inner-disc lifetime, following the approach of \citeads{2021ApJ...910...51K} as
 \begin{equation}
     t_\mathrm{life} \simeq -\frac{t_\mathrm{age}}{\ln{f_\mathrm{disc}}}\, ,
 \end{equation}
 where $t_\mathrm{age} = 5\, \mathrm{Myr}$ \citepads{2011A&A...536A..63B}.
 
-In Fig.~\ref{fig:obs} we directly compared the observational data points derived from \citetads{2012A&A...547A..80B} in grey, with the \textbf{inner-}disc lifetime obtained from eqs.~\ref{eq:MdotLxMass}, \ref{eq:tlife} in sea-green and, for comparison, in light-green the result using the photoeavaporative mass-loss rate from eq.~B1 of \citetads{2012MNRAS.422.1880O}. The shaded region represents the uncertainty in the observational relation between the accretion rates and stellar masses (equation~
+In Figure~\ref{fig:obs} we directly compared the observational data points derived from \citetads{2012A&A...547A..80B} in grey, with the inner-disc lifetime obtained from eqs.~\ref{eq:MdotLxMass}, \ref{eq:tlife} in sea-green and, for comparison, in light-green the result using the photoeavaporative mass-loss rate from equation~B1 of \citetads{2012MNRAS.422.1880O}. The shaded region represents the uncertainty in the observational relation between the accretion rates and stellar masses (equation~
 \ref{eq:mdotAlcala}) and that in the X-ray luminosity as a function of stellar mass (equation~\ref{eq:Lx}). The sharp increase of the shaded regions for stars $<$ \SI{0.2}{\solarmass} is mainly caused by the large uncertainty of equation~\ref{eq:mdotAlcala} for small mass stars.
 
 In order to get the best fit to the observation we used a linear relation between the initial disc mass and stellar mass and a initial value of \SI{0.14}{\mathrm{M}_\star} for the current models and \SI{0.06}{\mathrm{M}_\star} for \citetads{2012MNRAS.422.1880O}.
@@ -448,11 +448,11 @@ In order to get the best fit to the observation we used a linear relation betwee
 \begin{figure}
     \centering
     \includegraphics[width=\columnwidth]{Figure11}
-    \caption{Inner-disc lifetime calculated from our models using eq.~\ref{eq:tlife} compared with the disc fraction as a function of the mass for the members of $\lambda$ Ori. The shaded regions show the uncertainty in equations~\ref{eq:mdotAlcala},\ref{eq:Lx}. \label{fig:obs}}
+    \caption{Inner-disc lifetime calculated from our models using equation~\ref{eq:tlife} compared with the disc fraction as a function of the mass for the members of $\lambda$ Ori. The shaded regions show the uncertainty in equations~\ref{eq:mdotAlcala},\ref{eq:Lx}. \label{fig:obs}}
 \end{figure}
-The results match very well the observations for the whole range of explored masses, and in particular the change in the slope for masses below \SI{0.3}{\solarmass}, which gives us confidence on the ability of the photoevaporative models to predict the observed \textbf{inner-}disc lifetimes. Furthermore, our new prescription, with a linear scaling of disc masses as a function of stellar mass, captures better the \textbf{observed} distribution with respect to the previous state of the art model.
+The results match very well the observations for the whole range of explored masses, and in particular the change in the slope for masses below \SI{0.3}{\solarmass}, which gives us confidence on the ability of the photoevaporative models to predict the observed inner-disc lifetimes. Furthermore, our new prescription, with a linear scaling of disc masses as a function of stellar mass, captures better the observed distribution with respect to the previous state of the art model.
 
-\textbf{The gap opening condition is local and it is usually satisfied in late stages of disc evolution inside \SI{10}{\astronomicalunit} (see e.g. \citetalias{2019MNRAS.487..691P}). Adopting the cumulative wind mass-loss rate in equation~\ref{eq:tlife} is a simplification, although the mass removed in the outer disc affects the mass flux reaching the inner disc. We are currently working to merge all our results in a comprehensive disc and planet population synthesis models (Emsenhuber et al. in prep., K{\"u}ster et al. in prep.), but this simplified approach allows us nevertheless to test whether our models correctly predicts the observed behaviour}.
+The gap opening condition is local and it is usually satisfied in late stages of disc evolution inside \SI{10}{\astronomicalunit} (see e.g. \citetalias{2019MNRAS.487..691P}). Adopting the cumulative wind mass-loss rate in equation~\ref{eq:tlife} is a simplification, although the mass removed in the outer disc affects the mass flux reaching the inner disc. We are currently working to merge all our results in comprehensive disc and planet population synthesis models (Emsenhuber et al. in prep., K{\"u}ster et al. in prep.), but this simplified approach allows us nevertheless to test whether our models correctly predicts the observed behaviour.
 
 %-------------------------------------------------------------------
 \section{Conclusions}\label{sec:conclusions}
@@ -468,7 +468,7 @@ The results match very well the observations for the whole range of explored mas
       \item we provide fitting functions in Table~\ref{tab:fit} for the surface mass-loss rate profiles for different stellar masses whose luminosity is scaled based on equation~\ref{eq:Lx} that can be readily applied to disc and planet population synthesis codes;
       \item the resulting cumulative mass loss rate scales linearly with the stellar mass (see equation~\ref{eq:MdotLxMass});
       \item the temperature as a function of the gravitational radius at the sonic surface scales linearly with the stellar mass (see Figure~\ref{fig:sonicsurfrescaled});
-      \item the observed \textbf{inner-}disc lifetimes as a function of stellar mass can be very well reproduced by our new models, indicating that X-ray photoevaporation dominates the final phases of protoplanetary disc evolution (see Figure~\ref{fig:obs}).
+      \item the observed inner-disc lifetimes as a function of stellar mass can be very well reproduced by our new models, indicating that X-ray photoevaporation dominates the final phases of protoplanetary disc evolution (see Figure~\ref{fig:obs}).
    \end{enumerate}
 
 \section{Data availability}
