@@ -24,7 +24,6 @@ frac = 10 ** (AL * np.exp(((np.log(np.log10(2e30)) - BL) ** 2.0) / CL) + DL) / 1
     AL * np.exp(((np.log(np.log10(Lx07)) - BL) ** 2.0) / CL) + DL
 )
 mdot07 = mdot07 / frac
-init_idx = 0
 fin_idx = -50
 data = [
     (mdot01[fin_idx:]),
@@ -37,7 +36,6 @@ data = [
 fig1, ax1 = plt.subplots()
 ax1.boxplot(data, positions=[0.1, 0.3, 0.5, 0.7, 1.0])
 x = np.linspace(0.1, 1.0, 1000)
-Mstelle = np.asarray([0.1, 0.3, 0.5, 0.7, 1.0])
 ax1.plot(x, 3.93e-8 * x, "k-.", label="$3.93 \cdot 10^{-8} \, \mathrm{M}_\star$")
 ax1.fill_between(
     x,

@@ -28,7 +28,6 @@ dirs = [
 ]
 labels = ["\\texttt{0.1Msun}", "\\texttt{0.3Msun}", "\\texttt{0.5Msun}", "\\texttt{1Msun}"]
 Mstar = [0.1, 0.3, 0.5, 1.0]
-index_max = [415, 470, 452, 553]
 
 xtick_label = [[0,2.5,5,7.5,10],
           [0,8,16,24,32],
@@ -59,7 +58,7 @@ for i in range(2):
             ax[i, j].set_ylabel(r"Z [R$_g$]", size=14, color="black")
 
         files = getFilenames()[:]
-        
+
         step = 0
         xcell, ycell, zcell = (getGridCell() * rscale).to(u.cm)
         X = xcell
@@ -67,7 +66,7 @@ for i in range(2):
         D = (getVar(files[step], step, "rho") * rhoscale).to(u.g / u.cm ** 3)
         Pr = (getVar(files[step], step, "prs") * vscale ** 2 * rhoscale).to(u.barye)
         T = ((Pr * mu * const.m_p) / (const.k_B * D)).to(u.K).value
-        
+
         if i == 0:
             quantity = T
             labelplot = r"T [K]"

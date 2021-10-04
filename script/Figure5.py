@@ -107,49 +107,41 @@ fig, ax = plt.subplots()
 r1 = radius1d1(DIMT1 - 1, 0, DIMR1 - 1)
 gamma = 1.4
 OmegaKep = np.sqrt(const.G * 0.1 * const.M_sun / r1.to(u.cm) ** 3).to(1.0 / u.s)
-Rg = 5.05 * 0.1
-Rg = 1.0
 H1 = (
     np.sqrt(gamma * Pr01[DIMT1 - 1, 0 : DIMR1 - 1] / D01[DIMT1 - 1, 0 : DIMR1 - 1])
     * 1.0
     / (OmegaKep * (r1.to(u.cm)))
 )
-ax.plot(r1 / Rg, H1, "k:", label=labels[0])
+ax.plot(r1, H1, "k:", label=labels[0])
 
 r3 = radius1d3(DIMT3 - 1, 0, DIMR3 - 1)
 OmegaKep = np.sqrt(const.G * 0.3 * const.M_sun / r3.to(u.cm) ** 3).to(1.0 / u.s)
-Rg = 5.05 * 0.3
-Rg = 1.0
 H3 = (
     np.sqrt(gamma * Pr03[DIMT3 - 1, 0 : DIMR3 - 1] / D03[DIMT3 - 1, 0 : DIMR3 - 1])
     * 1.0
     / (OmegaKep * (r3.to(u.cm)))
 )
-ax.plot(r3 / Rg, H3, "k-.", label=labels[1])
+ax.plot(r3, H3, "k-.", label=labels[1])
 
 r5 = radius1d5(DIMT5 - 1, 0, DIMR5 - 1)
 OmegaKep = np.sqrt(const.G * 0.5 * const.M_sun / r5.to(u.cm) ** 3).to(1.0 / u.s)
-Rg = 5.05 * 0.5
-Rg = 1.0
 H5 = (
     np.sqrt(gamma * Pr05[DIMT5 - 1, 0 : DIMR5 - 1] / D05[DIMT5 - 1, 0 : DIMR5 - 1])
     * 1.0
     / (OmegaKep * (r5.to(u.cm)))
 )
-ax.plot(r5 / Rg, H5, "k--", label=labels[2])
+ax.plot(r5, H5, "k--", label=labels[2])
 
 r10 = radius1d10(DIMT10 - 1, 0, DIMR10 - 1)
 OmegaKep = np.sqrt(const.G * const.M_sun / r10.to(u.cm) ** 3).to(1.0 / u.s)
-Rg = 5.05 * 1
-Rg = 1.0
 H10 = (
     np.sqrt(gamma * Pr10[DIMT10 - 1, 0 : DIMR10 - 1] / D10[DIMT10 - 1, 0 : DIMR10 - 1])
     * 1.0
     / (OmegaKep * (r10.to(u.cm)))
 )
-ax.plot(r10 / Rg, H10, "k-", label=labels[3])
+ax.plot(r10, H10, "k-", label=labels[3])
 
-ax.set_xlabel("R [R$_g$]", fontsize=14)
+ax.set_xlabel("R [au]", fontsize=14)
 ax.set_ylabel("Scale Height H/R", fontsize=14)
 ax.set_xlim((0.0, 40))
 ax.set_ylim(0.03, 0.25)

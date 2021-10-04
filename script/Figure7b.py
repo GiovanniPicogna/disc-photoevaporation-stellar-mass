@@ -20,8 +20,7 @@ Mdot = [
     pow(10, -7.58791478942398),
     pow(10, -7.424759928546305),
 ]
-idx = 1.0
-mu = 2.35
+
 x = np.linspace(0.1, 50, 4000)
 a01 = -3.83368381
 b01 = 22.9099733
@@ -30,11 +29,6 @@ d01 = 67.8918937
 e01 = -45.0137998
 f01 = 16.2976639
 g01 = -3.54258614
-Mdot01 = 3.55e-09
-Ts = (
-    (0.125 * x ** (0.85) * mu * const.m_p * const.G * const.M_sun * Mstar[0])
-    / (2.0 * const.k_B * ((x * u.AU).to(u.cm)))
-).to(u.K)
 Rg = 5.05 * 0.1
 plt.loglog(
     x / Rg,
@@ -57,11 +51,6 @@ d03 = 117.602662
 e03 = -144.376859
 f03 = 94.7854366
 g03 = -26.7363296
-Mdot03 = 9.63e-9
-Ts = (
-    (0.125 * x ** (0.85) * mu * const.m_p * const.G * const.M_sun * Mstar[1])
-    / (2.0 * const.k_B * ((x * u.AU).to(u.cm)))
-).to(u.K)
 Rg = 5.05 * 0.3
 plt.loglog(
     x / Rg,
@@ -84,11 +73,6 @@ d05 = 71.2489311
 e05 = -71.4279364
 f05 = 37.8706679
 g05 = -9.35078265
-Mdot05 = 1.7e-08
-Ts = (
-    (0.125 * x ** (0.85) * mu * const.m_p * const.G * const.M_sun * Mstar[2])
-    / (2.0 * const.k_B * ((x * u.AU).to(u.cm)))
-).to(u.K)
 Rg = 5.05 * 0.5
 plt.loglog(
     x / Rg,
@@ -111,11 +95,6 @@ d1 = 56.4476652
 e1 = -67.7402956
 f1 = 43.9212155
 g1 = -13.2315666
-Mdot1 = 4.35e-08
-Ts = (
-    (0.125 * x ** (0.85) * mu * const.m_p * const.G * const.M_sun * Mstar[3])
-    / (2.0 * const.k_B * ((x * u.AU).to(u.cm)))
-).to(u.K)
 Rg = 5.05
 plt.loglog(
     x / Rg,
@@ -131,7 +110,6 @@ plt.loglog(
 )
 
 plt.xlabel(r"R [R$_g$]", fontsize=14)
-plt.ylabel(r"Culmative Mass-loss Rate", fontsize=14)
 plt.ylim(1.0e-15, 2.0e-11)
 plt.xlim(0.2, 100)
 plt.legend(loc=3)
