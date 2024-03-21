@@ -18,14 +18,14 @@ grid_004:
  K6   2.335E+00  2.615E+00   4278.   1.000  4.50e-2    400 au
 
 Disk model parameters:
-Mass accretion rate: 1.0e-8
-alpha (Shakura & Sunyaev viscosity parameter) = 0.01 
-inclination = 60 degrees
-minimum grain size in disk atmosphere: 0.005 microns
-maximum grain size in disk atmosphere: 0.25 microns
-minimum grain size in disk midplane: 0.005 microns
-maximum grain size in disk midplane: 1 mm 
-epsilon (dust settling parameter) = 1 i.e., well-mixed dust
+- Mass accretion rate: 1.0e-8
+- alpha (Shakura & Sunyaev viscosity parameter) = 0.01 
+- inclination = 60 degrees
+- minimum grain size in disk atmosphere: 0.005 microns
+- maximum grain size in disk atmosphere: 0.25 microns
+- minimum grain size in disk midplane: 0.005 microns
+- maximum grain size in disk midplane: 1 mm 
+- epsilon (dust settling parameter) = 1 i.e., well-mixed dust
 
 Here is a typical disk structure file name:
 fort14.a0.01.irr.grid_001.e1.0.amax0p25_amax1mm.dat
